@@ -13,6 +13,6 @@ public class Scraper {
 
   public static URL getComicURL() throws Exception {
     Document document = getHTMLDoc();
-    return new URL(document.getElementById("cc-comic").attr("src"));
+    return new URL(document.getElementById("cc-comic").attr("src").replace(" ", "%20"));
   }
 }
